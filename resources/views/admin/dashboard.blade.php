@@ -38,7 +38,7 @@
               </thead>
               <tbody>
 
-         {{-- @foreach ($inquiryform as $item) 
+         @foreach ($inquiryform as $item) 
          <tr>
           <td colspan="col" class="text-center"> {{$item->firstName}}</td>
           <td colspan="col" class="text-center">{{$item->lastName}}</td>
@@ -46,9 +46,9 @@
           <td colspan="col" class="text-center">{{$item->emailAddress}}</td>
           <td colspan="col" class="text-center">{{substr($item->clientMessage, 0, 20)}}.....</td>
           <td colspan="col" class="text-center">{{$item->created_at}}</td>
-          <td> --}}
+          <td>
             <center>
-              {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#clientMessageModal" data-client-message="{{$item->clientMessage}}">Details</button> --}}
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#clientMessageModal" data-client-message="{{$item->clientMessage}}">Details</button>
             </center>
           </td>
           <!-- Modal -->
@@ -72,7 +72,7 @@
                     </div>
                     <!-- End Of Modal -->
                     </tr>
-            {{-- @endforeach --}}
+            @endforeach
                       </tbody>
                       </table>
                       

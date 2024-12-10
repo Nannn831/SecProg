@@ -26,10 +26,9 @@
             <p class="mb-3 text-center">Laporin aja bang semua kejadian ada yang begini ada yang begitu begini begitu juga ada</p>
         </div>
         
-        @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
-                                @auth
-                                @else
+       
+                            <nav class="">
+                                
                                 <div class="button content-center">
                                     <h1 class="mb-3 text-2xl font-semibold text-gray-900 dark:text-white">Sebelum Lanjut Lapor Login Dulu Dong</h1>
                                     <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
@@ -37,16 +36,15 @@
                                         <a href="{{ url('login') }}">Login</a>
                                         </span>
 
-                                    @if (Route::has('register'))
+                                   
                                     <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
                                         <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                            <a href="{{ url('register') }}">Login Juga Tapi Beda Warna</a>
+                                            <a href="{{ url('register') }}">Register</a>
                                         </span>
                                     </button>
-                                    @endif
-                                @endauth
+                                    
                             </nav>
-@endif
+     
 
     </body>
 </html>

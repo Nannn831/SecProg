@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\inquiryFormController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\FileUploadController;
 
 Route::get('/', function () {
     return view ('welcome');
@@ -22,4 +24,7 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 route::get('admin/dashboard', [HomeController::class, 'index']);
+Route::resource('inquiryForm', inquiryFormController::class);
+
+
 

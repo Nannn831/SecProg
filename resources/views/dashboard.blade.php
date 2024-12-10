@@ -24,7 +24,7 @@
       </script>
     @endif
   </div>
-  <form action="" method="post"
+  <form action="{{ route('inquiryForm.store') }}" method="post"
       class="container flex flex-col items-center justify-center mx-auto">
       @csrf
       <div class="flex flex-wrap justify-center gap-2 xl:gap-4 lg:gap-3">
@@ -58,8 +58,9 @@
             cols="30" rows="10" placeholder=""></textarea>
         </div>
       </div>
+
       <button type="submit"
-        class="flex items-center justify-center mb-4 px-5 py-2 mt-5 text-center transition-all ease-in-out border-2 rounded-full shadow-md lg:py-3 lg:px-6 mt w-fit text-mainred border-mainred shadow-light hover:bg-mainred hover:border-lightred hover:text-white hover:shadow-lg gap-x-2 hover:gap-x-4 hover:pr-4 duration-400">
+        class="flex items-center justify-center px-5 py-2 mt-5 text-center transition-all ease-in-out border-2 rounded-full shadow-md lg:py-3 lg:px-6 mt w-fit text-mainred border-mainred shadow-light hover:bg-mainred hover:border-lightred hover:text-white hover:shadow-lg gap-x-2 hover:gap-x-4 hover:pr-4 duration-400">
         <span class="font-semibold text-[14px] lg:text-base">Send Inquiry</span>
         <i class="text-xl lg:text-2xl bi bi-arrow-right-circle-fill"></i>
       </button>
